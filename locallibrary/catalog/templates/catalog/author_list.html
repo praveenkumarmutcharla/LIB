@@ -1,0 +1,10 @@
+{% extends "catalog/base_generic.html" %}
+{% block content%}
+    <h1> AUTHORS</h1>
+    {% if query %}
+        <p><strong>NAME</strong></p>
+        {% for author in query%}
+            <a href="/catalog/authors/{{author.id}}">{{author.first_name}}<br></a>
+        {% endfor%}
+    {% endif%}
+{% endblock%}
